@@ -1,0 +1,139 @@
+/*===========================================================================
+    General 
+===========================================================================*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+:root {
+  --OrangePrimary: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(216, 12%, 54%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+  background: var(--VeryDarkBlue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+/*===========================================================================
+    Utility classes
+===========================================================================*/
+
+.d-flex-jCenter-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-flex-jBetween-a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.d-flex-jBetween-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button__primary {
+  border: none;
+  background: var(--OrangePrimary);
+  color: var(--White);
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  &:hover {
+    background: var(--White);
+    color: var(--OrangePrimary);
+  }
+}
+
+/*===========================================================================
+    Main
+===========================================================================*/
+
+.main {
+  background: var(--DarkBlue);
+  max-width: 400px;
+  border-radius: 1.5rem;
+  height: 350px;
+  @media (max-width: 421px) {
+    max-width: 350px;
+  }
+  @media (max-width: 362px) {
+    max-width: 320px;
+  }
+  @media (max-width: 328px) {
+    max-width: 300px;
+  }
+}
+
+.main__container {
+  width: 85%;
+  height: 90%;
+}
+
+.image__stars {
+  background: var(--VeryDarkBlue);
+  width: 12%;
+  height: 12%;
+  border-radius: 50%;
+  @media (max-width: 368px) {
+    width: 15%;
+  }
+}
+
+.main__information {
+  h1 {
+    color: var(--White);
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  p {
+    padding-top: 0.5rem;
+    color: var(--MediumGrey);
+    font-weight: 400;
+  }
+}
+
+.nav {
+  height: 15%;
+  width: 100%;
+  button {
+    width: 50px;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    background: var(--VeryDarkBlue);
+    color: var(--LightGrey);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    &:focus {
+      background: var(--OrangePrimary);
+      color: var(--White);
+    }
+    @media (max-width: 368px) {
+      width: 45px;
+    }
+  }
+}
